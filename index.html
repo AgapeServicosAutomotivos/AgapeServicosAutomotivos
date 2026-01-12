@@ -64,7 +64,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* ===== BOTÃO ===== */
+/* ===== BOTÃO HEADER ===== */
 .btn {
   padding: 16px 36px;
   background: linear-gradient(135deg, #25d366, #1ebe5d);
@@ -124,10 +124,53 @@ section h2 {
 }
 
 /* ===== CONTATO ===== */
-.contato p {
-  font-size: 1.1em;
+.contato-card {
+  max-width: 420px;
+  margin: auto;
+  background: linear-gradient(180deg, #1a1a1a, #0e0e0e);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #222;
+}
+
+.contato-card p {
   color: #ccc;
+  font-size: 1.1em;
   line-height: 2;
+}
+
+.contato-card a {
+  color: #25d366;
+  text-decoration: none;
+}
+
+.contato-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== WHATSAPP FIXO ===== */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37,211,102,0.5);
+  z-index: 999;
+  transition: transform 0.3s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-fixo img {
+  width: 32px;
 }
 
 /* ===== FOOTER ===== */
@@ -191,17 +234,28 @@ footer {
 
 <section class="contato">
   <h2>Contato</h2>
-  <p>
-    📍 Vila Nova Sao Pedro Tietê <br>
-    📞 (15) 991870643<br>
-    🕒 Segunda a Sexta — 08h às 18h
-  </p>
+
+  <div class="contato-card">
+    <p>
+      📍 <a href="https://www.google.com/maps/search/?api=1&query=Vila+Nova+São+Pedro+Tietê" target="_blank">
+        Vila Nova São Pedro – Tietê
+      </a><br><br>
+
+      📞 <a href="tel:15991870643">(15) 99187-0643</a><br><br>
+
+      🕒 Segunda a Sexta — 08h às 18h
+    </p>
+  </div>
 </section>
 
 <footer>
   © 2026 — Ágape Serviços Automotivos • Todos os direitos reservados
 </footer>
 
+<!-- WHATSAPP FIXO -->
+<a class="whatsapp-fixo" href="https://wa.me/15991870643" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 </body>
 </html>
-
