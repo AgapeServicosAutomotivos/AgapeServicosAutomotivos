@@ -15,6 +15,81 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="logo.png" />
   <style>
+    /* MOBILE AJUSTES */
+@media (max-width: 600px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 16px;
+  }
+  .brand img {
+    width: 60px;
+    height: 60px;
+  }
+  .brand strong {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .nav-links a, .cta {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  header {
+    min-height: auto;
+    padding: 40px 16px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  h1 img {
+    width: 70px;
+    height: 70px;
+  }
+  .subtitulo {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .servicos {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 18px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  .galeria img {
+    aspect-ratio: 16/9;
+  }
+
+  .contato-card {
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-fixo {
+    width: 50px;
+    height: 50px;
+    bottom: 12px;
+    right: 12px;
+  }
+  .whatsapp-fixo img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
     :root{
       --bg:#0b0b0b;
       --bg-2:#0f0f10;
