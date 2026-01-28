@@ -6,90 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Manutenção preventiva e corretiva de caminhões e lavagem pesada em Tietê, SP." />
   <meta name="theme-color" content="#0b0b0b" />
-  <meta property="og:title" content="Ágape Serviços Automotivos" />
-  <meta property="og:description" content="Mecânica de caminhões e lavagem pesada com padrão profissional." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="logo.png" />
+
   <style>
-    /* MOBILE AJUSTES */
-@media (max-width: 600px) {
-  .nav-inner {
-    flex-direction: column;
-    gap: 12px;
-    padding: 8px 16px;
-  }
-  .brand img {
-    width: 60px;
-    height: 60px;
-  }
-  .brand strong {
-    font-size: 1rem;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  .nav-links a, .cta {
-    font-size: 0.9rem;
-    padding: 6px 10px;
-  }
-
-  header {
-    min-height: auto;
-    padding: 40px 16px;
-  }
-  h1 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-  h1 img {
-    width: 70px;
-    height: 70px;
-  }
-  .subtitulo {
-    font-size: 0.95rem;
-    text-align: center;
-  }
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .servicos {
-    grid-template-columns: 1fr;
-  }
-  .card {
-    padding: 18px;
-  }
-
-  .galeria {
-    grid-template-columns: 1fr;
-  }
-  .galeria img {
-    aspect-ratio: 16/9;
-  }
-
-  .contato-card {
-    padding: 18px;
-    font-size: 0.95rem;
-  }
-
-  .whatsapp-fixo {
-    width: 50px;
-    height: 50px;
-    bottom: 12px;
-    right: 12px;
-  }
-  .whatsapp-fixo img {
-    width: 22px;
-    height: 22px;
-  }
-}
-
     :root{
       --bg:#0b0b0b;
       --bg-2:#0f0f10;
@@ -97,107 +20,262 @@
       --muted:#a9b0bb;
       --primary:#25d366;
       --primary-2:#1ebe5d;
-      --accent:#00c2ff;
       --card:#121316;
       --border:#1f2227;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
-      --radius-sm: 12px;
-      --max: 1100px;
-      --gap: clamp(16px, 2vw, 24px);
-      --pad: clamp(20px, 3vw, 32px);
-      --h1: clamp(2.2rem, 4vw, 3.2rem);
-      --h2: clamp(1.6rem, 3vw, 2.2rem);
-      --h3: clamp(1.2rem, 2.2vw, 1.4rem);
-      --lead: clamp(1rem, 1.6vw, 1.15rem);
+      --radius:16px;
+      --max:1100px;
+      --pad:24px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 50% -200px, #141517 0%, #0b0b0b 60%, #070708 100%);
-      color: var(--text);
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:#0b0b0b;
+      color:var(--text);
       line-height:1.6;
     }
 
     /* NAV */
     .nav{
-      position: sticky; top:0; z-index: 50;
-      backdrop-filter: saturate(1.2) blur(8px);
-      background: linear-gradient(180deg, rgba(10,10,10,.85), rgba(10,10,10,.65));
-      border-bottom: 1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(10,10,10,.85);
+      border-bottom:1px solid var(--border);
     }
+
     .nav-inner{
-      max-width: var(--max); margin: 0 auto;
-      padding: 10px var(--pad);
-      display:flex; align-items:center; justify-content:space-between; gap: var(--gap);
+      max-width:var(--max);
+      margin:auto;
+      padding:12px var(--pad);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
     }
-    .brand{ display:flex; align-items:center; gap:50px; text-decoration:none; color:var(--text); }
-    .brand img{ width:100px; height:100px; border-radius:60px; }
-    .nav-links{ display:flex; gap:18px; align-items:center; }
-    .nav-links a{ color:var(--muted); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:10px; }
-    .nav-links a:hover{ color:var(--text); background: rgba(255,255,255,.04); }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:white;
+      text-decoration:none;
+    }
+
+    .brand img{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 12px;
+      border-radius:10px;
+    }
+
     .cta{
-      padding:10px 16px; border-radius:999px; font-weight:700; color:#0b0b0b;
-      background: linear-gradient(135deg, var(--primary), var(--primary-2)); text-decoration:none;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#000;
+      font-weight:700;
+      border-radius:999px;
     }
 
     /* HERO */
-    header{ min-height: 88vh; display:grid; place-items:center; }
-    .hero-wrap{
-      max-width: var(--max); width:100%; padding: calc(var(--pad)*2) var(--pad);
-      display:grid; grid-template-columns: 1.2fr .8fr; gap: clamp(24px, 4vw, 48px); align-items:center;
+    header{
+      padding:60px var(--pad);
     }
-    @media (max-width:900px){ .hero-wrap{ grid-template-columns:1fr; } }
-    h1{ font-size: var(--h1); line-height:1.15; }
-    .subtitulo{ color: var(--muted); max-width:640px; }
-    .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; }
-    .btn{ padding:14px 22px; border-radius:14px; font-weight:700; text-decoration:none; }
-    .btn-primary{ background: linear-gradient(135deg, var(--primary), var(--primary-2)); color:#0b0b0b; }
-    .btn-ghost{ color: var(--text); border:1px solid var(--border); }
 
-    .hero-visual{
-      height: clamp(280px, 40vw, 420px);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, #121316, #0e0f12);
-      border: 1px solid var(--border);
+    .hero-wrap{
+      max-width:var(--max);
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+      align-items:center;
+    }
+
+    h1{
+      font-size:3rem;
+      line-height:1.15;
+    }
+
+    .subtitulo{
+      color:var(--muted);
+      max-width:600px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      margin-top:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#000;
+    }
+
+    .btn-ghost{
+      border:1px solid var(--border);
+      color:white;
     }
 
     /* SECTIONS */
-    section{ padding: calc(var(--pad)*2) var(--pad); }
-    .section-inner{ max-width: var(--max); margin: 0 auto; }
-    .section-title{ font-size: var(--h2); margin-bottom: 18px; }
-    .section-sub{ color: var(--muted); max-width:720px; margin-bottom:28px; }
+    section{
+      padding:60px var(--pad);
+    }
+
+    .section-inner{
+      max-width:var(--max);
+      margin:auto;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      margin-bottom:32px;
+    }
 
     /* SERVIÇOS */
-    .servicos{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: var(--gap); }
-    .card{ background: linear-gradient(180deg, #14161a, #0f1013); border:1px solid var(--border); border-radius: var(--radius); padding:26px; }
-    .card h3{ margin-bottom:8px; }
-    .card p{ color: var(--muted); }
+    .servicos{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#121316;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+    }
 
     /* GALERIA */
-    .galeria{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: var(--gap); }
-    .galeria figure{ margin:0; border-radius: var(--radius); overflow:hidden; border:1px solid var(--border); }
-    .galeria img{ width:100%; height:100%; aspect-ratio: 4/3; object-fit:cover; transition: transform .4s ease; }
-    .galeria figure:hover img{ transform: scale(1.06); }
+    .galeria{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .galeria img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border-radius:var(--radius);
+    }
 
     /* CONTATO */
-    .contato-card{ max-width:520px; margin:0 auto; background: linear-gradient(180deg, #14161a, #0f1013); border:1px solid var(--border); border-radius: var(--radius); padding:26px; }
-    .contato-card a{ color: var(--primary); text-decoration:none; font-weight:600; }
+    .contato-card{
+      max-width:520px;
+      margin:auto;
+      background:#121316;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      text-align:center;
+    }
 
-    footer{ padding: var(--pad); background:#09090a; color:#8a9099; text-align:center; border-top:1px solid var(--border); }
+    footer{
+      padding:24px;
+      text-align:center;
+      color:#888;
+      border-top:1px solid var(--border);
+    }
 
-    .whatsapp-fixo{ position:fixed; bottom:20px; right:20px; width:60px; height:60px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); border-radius:50%; display:flex; align-items:center; justify-content:center; }
-    .whatsapp-fixo img{ width:28px; height:28px; }
+    .whatsapp-fixo{
+      position:fixed;
+      bottom:18px;
+      right:18px;
+      width:56px;
+      height:56px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .whatsapp-fixo img{
+      width:24px;
+      height:24px;
+    }
+
+    /* =====================
+       MOBILE FIX REAL
+    ===================== */
+    @media (max-width:600px){
+
+      .nav-inner{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      .brand img{
+        width:56px;
+        height:56px;
+      }
+
+      header{
+        padding:36px 16px;
+      }
+
+      .hero-wrap{
+        grid-template-columns:1fr;
+        gap:28px;
+        text-align:center;
+      }
+
+      h1{
+        font-size:1.6rem;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .servicos,
+      .galeria{
+        grid-template-columns:1fr;
+      }
+
+      .galeria img{
+        aspect-ratio:16/9;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top"><img src="logo.png" alt="Logo Ágape" /><strong>Ágape Serviços Automotivos</strong></a>
+    <a class="brand" href="#">
+      <img src="logo.png" alt="Logo Ágape">
+      <strong>Ágape Serviços Automotivos</strong>
+    </a>
     <div class="nav-links">
       <a href="#servicos">Serviços</a>
       <a href="#oficina">Oficina</a>
@@ -207,40 +285,30 @@
   </div>
 </nav>
 
-<header id="top">
+<header>
   <div class="hero-wrap">
     <div>
-      <h1 style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-        <img src="logo.png" alt="Logo Ágape" style="width:100px; height:100px; border-radius:18px; box-shadow:0 12px 28px rgba(0,0,0,.45);" />
-        <span>Mecânica de caminhões e lavagem pesada com padrão profissional</span>
-      </h1>
-      <p class="subtitulo">Manutenção preventiva e corretiva com foco em qualidade, agilidade e um espaço organizado para receber seu caminhão.</p>
+      <h1>Mecânica de caminhões e lavagem pesada com padrão profissional</h1>
+      <p class="subtitulo">
+        Manutenção preventiva e corretiva com foco em qualidade, agilidade e organização.
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/15991870643" target="_blank">Falar no WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/15991870643">Falar no WhatsApp</a>
         <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
       </div>
     </div>
-    <div class="hero-visual" style="display:none"></div>
   </div>
 </header>
 
 <section id="servicos">
   <div class="section-inner">
     <h2 class="section-title">Nossos serviços</h2>
-    <p class="section-sub">Serviços essenciais para manter seu caminhão sempre em dia.</p>
+    <p class="section-sub">Tudo para manter seu caminhão em dia.</p>
+
     <div class="servicos">
-      <article class="card">
-        <h3>🔧 Mecânica de caminhões</h3>
-        <p>Manutenção preventiva e corretiva, freios, suspensão, motor e transmissão.</p>
-      </article>
-      <article class="card">
-        <h3>🚿 Lavagem pesada</h3>
-        <p>Lavagem completa de chassis, carroceria e cabine, com alto padrão de acabamento.</p>
-      </article>
-      <article class="card">
-        <h3>📋 Inspeção e check-list</h3>
-        <p>Verificação técnica detalhada para mais segurança e confiabilidade.</p>
-      </article>
+      <div class="card">🔧 Mecânica de caminhões</div>
+      <div class="card">🚿 Lavagem pesada</div>
+      <div class="card">📋 Inspeção e check-list</div>
     </div>
   </div>
 </section>
@@ -248,11 +316,10 @@
 <section id="oficina">
   <div class="section-inner">
     <h2 class="section-title">Nossa estrutura</h2>
-    <p class="section-sub">Fotos reais do nosso espaço, pensado para oferecer organização, segurança e um serviço bem feito.</p>
     <div class="galeria">
-      <figure><img src="imgbor6.jpeg" alt="Área externa da oficina" loading="lazy" /></figure>
-      <figure><img src="imgbor5.jpeg" alt="Box de mecânica" loading="lazy" /></figure>
-      <figure><img src="imgbor4.jpeg" alt="Área de lavagem pesada" loading="lazy" /></figure>
+      <img src="imgbor6.jpeg">
+      <img src="imgbor5.jpeg">
+      <img src="imgbor4.jpeg">
     </div>
   </div>
 </section>
@@ -261,19 +328,18 @@
   <div class="section-inner">
     <h2 class="section-title">Contato</h2>
     <div class="contato-card">
-      <p>📍 <a href="https://maps.app.goo.gl/pXTvz8HbFhpLEnwu6" target="_blank">Vila Nova São Pedro — Tietê Click aqui</a><br/><br/>
-    
-      📞 <a href="tel:15991870643">(15) 99187-0643</a><br/><br/>
-      <span style="color:var(--muted)">Seg–Sex • 07:30h às 18h</span></p>
+      📍 Tietê – SP<br><br>
+      📞 (15) 99187-0643<br><br>
+      Seg–Sex • 07:30 às 18h
     </div>
   </div>
 </section>
 
 <footer>© 2026 — Ágape Serviços Automotivos</footer>
 
-<a class="whatsapp-fixo" href="https://wa.me/15991870643" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" /></a>
+<a class="whatsapp-fixo" href="https://wa.me/15991870643" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
-
-
